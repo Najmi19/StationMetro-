@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+	FILE* fichier=NULL;
+	fichier= fopen("metro.txt","r");
+	char *buffer= NULL;
+	int i=0,j=0;
+	size_t col;
+	if(fichier!=NULL){
+		while(getline(&buffer,&col,fichier)!=-1){
+			printf("%s",buffer);
+		}
+		if(buffer) free(buffer);		
+		fclose(fichier);
+	}
+	else{
+		fprintf(stderr,"ERREUR (%d) %s\n", errno,strerror(errno));
+		exit(EXIT_FAILURE);
+	}	
+	return 0;
+}

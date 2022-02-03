@@ -1,0 +1,11 @@
+▓=a
+◙=b
+¤=c
+╬=d
+░=e
+f=entrée
+g=place
+h=porteb
+i=porteh
+j=trainb
+k=tranh
